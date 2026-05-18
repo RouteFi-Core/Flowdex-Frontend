@@ -21,7 +21,7 @@
     "axios": "^1.7.2",
     "stellar-sdk": "^12.1.0",
     "@stellar/freighter-api": "^2.0.0",
-    "@creit.tech/stellar-wallets-kit": "^0.9.4",
+    "@creit.tech/stellar-wallets-kit": "1.9.5",
     "reactflow": "^11.11.4",
     "recharts": "^2.12.7",
     "clsx": "^2.1.1",

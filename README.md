@@ -107,7 +107,18 @@ NEXT_PUBLIC_ENABLE_ROUTE_SIMULATION=true
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The app redirects to `/swap` by default.
+Open [http://localhost:3000](http://localhost:3000) in your browser. The app redirects to `/swap` by default.
+
+> **Note:** If you see a blank page or routing error, make sure `NEXT_PUBLIC_FLOWDEX_API_URL` is set in `.env.local` — it is the only required variable.
+
+### 5. Build for production
+
+```bash
+npm run build
+npm run start
+```
+
+The production server runs on [http://localhost:3000](http://localhost:3000).
 
 ---
 

@@ -1,7 +1,10 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { StellarWalletsKit, WalletNetwork, FREIGHTER_ID } from "@creit.tech/stellar-wallets-kit";
+import { StellarWalletsKit, WalletNetwork } from "@creit.tech/stellar-wallets-kit";
+import { FreighterModule, FREIGHTER_ID } from "@creit.tech/stellar-wallets-kit/modules/freighter.module";
+import { xBullModule } from "@creit.tech/stellar-wallets-kit/modules/xbull.module";
+import { AlbedoModule } from "@creit.tech/stellar-wallets-kit/modules/albedo.module";
 import { useWalletStore } from "@/stores/wallet.store";
 import { env } from "@/lib/env";
 import { toast } from "sonner";
@@ -19,6 +22,7 @@ function getKit(): StellarWalletsKit {
     kit = new StellarWalletsKit({
       network: NETWORK_MAP[env.stellar.network] ?? WalletNetwork.TESTNET,
       selectedWalletId: FREIGHTER_ID,
+      modules: [new FreighterModule(), new xBullModule(), new AlbedoModule()],
     });
   }
   return kit;
